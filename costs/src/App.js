@@ -11,8 +11,8 @@ import Footer from './components/layout/Footer';
 function App() {
   return (
     <Router>
+      <Navbar /> 
       <Switch>
-        <Navbar />           
         <Container customClass="min-height">
           <Route exact path="/">
             <Home />
