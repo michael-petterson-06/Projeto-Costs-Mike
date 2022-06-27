@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* distanciar em espaços iguais.*/
+  background-color: #222;
+  padding: 1em;
+}
+
+
+.list {
+  display: flex;
+  list-style: none; /* tira os pontindo na frente da lista*/
+  align-items:center; /* alinha eles na verticarl*/
+}
+
+
+.item {
+  margin-right: 1em;
+}
+
+
+.item a {
+  color:  #fff;
+  text-decoration: none;
+}
+
+
+.item a:hover {
+    color: #ffbb33;
+}
