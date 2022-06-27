@@ -1,0 +1,28 @@
+.container {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between; /*espaçar elementos com distancia iguais*/
+    margin: 0 auto;
+    flex-wrap: wrap; /*Quando os elementos ultrapasarem a tela eles continuam na linha de baixo.*/
+    
+}
+
+ 
+.min-height {
+    min-height: 500px; /*mudar depois para 75% */
+}
+
+
+.start {
+    justify-content: flex-start; /*alinha tudo para o ínicio*/
+
+}
+
+
+.column {
+    flex-direction: column; /* mudar o eixo de direção*/
+    justify-content: start;
+}
+
+
+
