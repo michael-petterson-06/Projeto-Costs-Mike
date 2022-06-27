@@ -6,6 +6,7 @@ import NewProject from './components/pages/NewProject';
 import Container from './components/layout/Container';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
+import Projects  from './components/pages/Projects';
 
 
 function App() {
@@ -17,13 +18,16 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/company">
+          <Route exact path="/projects">
+            <Projects/>
+          </Route>
+          <Route exact path="/company">
             <Company />
           </Route>
-          <Route path="/contact">
+          <Route exact path="/contact">
             <Contact />
           </Route>
-          <Route path="/newproject">
+          <Route exact path="/newproject">
             <NewProject />
           </Route>
         </Container>
