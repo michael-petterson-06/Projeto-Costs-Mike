@@ -1,12 +1,37 @@
 import Styles from './NewProject.module.css'
 import ProjectForm from '../project/ProjectForm';
+import { useHistory } from 'react-router-dom';
 
 function NewProject() {
+
+
+    const history = useHistory();
+
+
+    function createPost (project) {
+        project.cost = 0
+        project.services = [];
+
+        fetch('http://localhost:5001/projects', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(project),
+          })
+            .then((resp) => resp.json())
+            .then((data) => {
+              history.push('/projects', { message: 'Projeto criado com sucesso!' })
+            })
+        }
+      
+    
+
     return (
         <div className={Styles.newproject_container}>
             <h1>Criar Projeto</h1>
             <p>Criar seu projeto para depois adicionar um serviço </p>
-            <ProjectForm btnText='Criar projetos'/>
+            <ProjectForm handleSubmit={ createPost } btnText='Criar projetos'/>
         </div>
     )
 }
