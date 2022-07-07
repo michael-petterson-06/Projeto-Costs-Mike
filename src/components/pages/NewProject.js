@@ -24,8 +24,7 @@ function NewProject() {
               history.push('/projects', { message: 'Projeto criado com sucesso!' })
             })
         }
-      
-    
+     
 
     return (
         <div className={Styles.newproject_container}>

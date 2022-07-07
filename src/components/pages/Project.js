@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import Loading from '../layout/Loading'
 import Container from '../layout/Container';
 import styles from './Project.module.css';
+import ProjectForm from '../project/ProjectForm';
+import Message from '../layout/Message';
 
 
 function Project () {
@@ -11,6 +13,8 @@ function Project () {
    
     const [project, setProject ] = useState([]);
     const [ showProjectForm, setShowProject ] = useState(false);
+    const [ message, setMessage ] = useState('');
+    const [ type, setType ] = useState('');
 
     useEffect(() => {
         setTimeout(() => {
@@ -35,12 +39,35 @@ function Project () {
    function toggleProjectForm () {
         setShowProject(!showProjectForm);
    }
+
+   function editPost (project) {
+        if (project.budget < project.cost) {
+            setMessage('Não há verba sufuciente para esse serviço')
+            setType('error')
+            return false
+        }
+        fetch(`http://localhost:5001/projects/${project.id}`,{
+            method: 'PATCH', // só alterar oque for enviado
+            headers: {
+                'content-Type': 'application/json', // para json se comunicar com API
+            },
+            body: JSON.stringify(project), //mando o projeto com texto para atualizar
+        }).then(resp => resp.json() )
+          .then((data) => {
+            setProject(data)
+            setShowProject(!showProjectForm);
+            setMessage('Projeto atualizado com sucesso!!!')
+            setType('success')
+          })   
+          .catch((error) => console.log(error))
+   }
   
     return (
         <React.Fragment>
             { project.name ? (
                 <div className={ styles.project_details }>
                     <Container customClass='column'>
+                        { message && <Message type={ type } msg={ message }/>}
                         <div className={ styles.details_container }>
                             <h1>Projeto: { project.name }</h1>
                             <button onClick={ toggleProjectForm } className={ styles.btn }>
@@ -60,7 +87,11 @@ function Project () {
                                 </div>
                             ) : (
                                 <div className= { styles.project_info}>
-                                    <p>Form</p>
+                                    <ProjectForm
+                                        handleSubmit={ editPost }
+                                        btnText='Concluir edição'
+                                        projectData={ project }
+                                    />
                                 </div>
                             )}
                         </div>
