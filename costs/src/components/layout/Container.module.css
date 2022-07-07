@@ -7,21 +7,22 @@
 }
 
  
-.min-height {
-    min-height: 75%; /*mudar depois para 75% */
-}
-
-
 .start {
     justify-content: flex-start; /*alinha tudo para o ínicio*/
 
-}
+}   
 
 
 .column {
     flex-direction: column; /* mudar o eixo de direção*/
     justify-content: start;
 }
+
+
+.min-height {
+    min-height: 75%; /*mudar depois para 75% */
+}
+
 
 
 
