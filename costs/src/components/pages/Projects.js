@@ -5,18 +5,25 @@ import styles from './Projects.module.css';
 import Container from '../layout/Container.js'
 import LinkButton from '../layout/LinkButton.js';
 import ProjectCard from '../project/ProjectCard.js';
+import Loading from '../layout/Loading'
 
 function Projects() {
 
     const [ projects, setProjects ] = useState([])
+    const [ removeLoading, setRemoveLoading] =useState(false)
+    
     const location = useLocation()
+    
     let message = ''
+    
     if (location.state){
         message = location.state.message
     }
 
     useEffect(() => {
-        getProducts()
+        setTimeout(() => {
+            getProducts()
+        }, 1000)
     }, [])
 
     const getProducts =()=>{
@@ -28,6 +35,7 @@ function Projects() {
         }).then((resp) => resp.json())
           .then((data) => {
             setProjects(data)
+            setRemoveLoading(true)
           })
           .catch((error) => console.log(error))
     }
@@ -50,6 +58,10 @@ function Projects() {
                         key={project.id}
                     />
                 ))}
+                { !removeLoading && <Loading />}
+                { removeLoading && projects.length === 0 &&
+                    <p>Não há projetos cadastrados</p>
+                }
             </Container>
         </div>
     ) 
