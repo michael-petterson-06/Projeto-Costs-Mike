@@ -10,7 +10,8 @@ import Loading from '../layout/Loading'
 function Projects() {
 
     const [ projects, setProjects ] = useState([])
-    const [ removeLoading, setRemoveLoading] =useState(false)
+    const [ removeLoading, setRemoveLoading] = useState(false)
+    const [ projectMessage, setProjectMessage ] = useState('')
     
     const location = useLocation()
     
@@ -20,12 +21,14 @@ function Projects() {
         message = location.state.message
     }
 
+   
     useEffect(() => {
         setTimeout(() => {
             getProducts()
         }, 1000)
     }, [])
 
+   
     const getProducts =()=>{
         fetch('http://localhost:5001/projects',{
             method:'GET',
@@ -36,8 +39,22 @@ function Projects() {
           .then((data) => {
             setProjects(data)
             setRemoveLoading(true)
-          })
+         })
           .catch((error) => console.log(error))
+    }
+
+
+    function removeProject(id) {
+        fetch(`http://localhost:5001/projects/${id}`,{
+            method: 'DELETE',
+            headers: {
+               'Content-Type': 'application/json',
+            },
+        }).then(resp => resp.json())
+          .then(data => {
+                setProjects(projects.filter((project) => project.id !== id))
+                setProjectMessage('Projeto removido com sucesso!!!')
+          })  
     }
 
     return (
@@ -46,16 +63,18 @@ function Projects() {
                 <h1>Projetos</h1>
                 <LinkButton to='/newproject' text='Criar Projeto'/>
             </div>
-            {message && <Message msg={ message } type='sucess'/>}
+            { message && <Message msg={ message } type='sucess'/> }
+            {projectMessage && <Message msg={projectMessage} type='sucess'  />}
             <Container  customClass='start'>
                 { projects.length > 0 &&
-                projects.map((project) =>(
+                 projects.map((project) =>(
                     <ProjectCard
                         id={ project.id}
                         name={ project.name }
                         budget={ project.budget }
                         category= { project.category.name}
                         key={project.id}
+                        handleRemove={ removeProject }
                     />
                 ))}
                 { !removeLoading && <Loading />}

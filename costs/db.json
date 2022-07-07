@@ -1,59 +1,15 @@
 {
   "projects": [
     {
-      "name": "Fernanda Petterson",
-      "budget": "200",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 1
-    },
-    {
-      "name": "Michael",
-      "budget": "5500",
+      "name": "Jussara",
+      "budget": "3300",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
       "cost": 0,
       "services": [],
-      "id": 2
-    },
-    {
-      "name": "Projeto 1",
-      "budget": "10000",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 3
-    },
-    {
-      "name": "projeto 4",
-      "budget": "225",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 4
-    },
-    {
-      "name": "Projeto 5",
-      "budget": "170",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 5
+      "id": 1
     }
   ],
   "categories": [
