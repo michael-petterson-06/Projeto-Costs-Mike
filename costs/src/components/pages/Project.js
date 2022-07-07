@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import styles from './Project.module.css'
+// import styles from './Project.module.css'
 
 
 function Project () {
@@ -10,7 +10,7 @@ function Project () {
     const [project, setProject ] = useState([]);
 
     useEffect(() => {
-        getProject()
+        getProject();
     }, [])
 
      
@@ -30,5 +30,7 @@ function Project () {
   
     return <div>{project.name}</div>
 }    
+
+
 
 export default Project;
