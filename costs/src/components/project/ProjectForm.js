@@ -47,7 +47,7 @@ function ProjectForm  ({ handleSubmit, btnText, projectData }) {
         })
     }
 
-
+   
     return (
         <form onSubmit={ submit } className={ Styles.form }>
             <Input
@@ -71,7 +71,7 @@ function ProjectForm  ({ handleSubmit, btnText, projectData }) {
                 text='Selecione uma categoria'
                 options={categories}
                 handleOnChange={ handleOnCategory }
-                value={ project.category ? project.category.id: ''}
+                value={ project.category ? project.category.id : ''}
             />
             <SubmitButton text={ btnText }/>
         </form>

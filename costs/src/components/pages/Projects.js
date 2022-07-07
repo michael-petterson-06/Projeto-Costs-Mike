@@ -24,12 +24,12 @@ function Projects() {
    
     useEffect(() => {
         setTimeout(() => {
-            getProducts()
+            getProjects()
         }, 1000)
     }, [])
 
    
-    const getProducts =()=>{
+    const getProjects =()=>{
         fetch('http://localhost:5001/projects',{
             method:'GET',
             header:{
@@ -56,7 +56,8 @@ function Projects() {
                 setProjectMessage('Projeto removido com sucesso!!!')
           })  
     }
-
+   
+    
     return (
         <div className={ styles.project_container }>
             <div className={ styles.title_container }>
