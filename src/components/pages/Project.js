@@ -3,8 +3,10 @@ import React, { useState, useEffect } from 'react';
 import Loading from '../layout/Loading'
 import Container from '../layout/Container';
 import styles from './Project.module.css';
+
 import ProjectForm from '../project/ProjectForm';
 import Message from '../layout/Message';
+
 
 
 function Project () {
@@ -14,6 +16,7 @@ function Project () {
     const [ project, setProject ] = useState([]);
     const [ showProjectForm, setShowProjectForm ] = useState(false);
     const [ showServiceForm, setShowServiceForm ] = useState(false);
+
     const [ message, setMessage ] = useState('');
     const [ type, setType ] = useState('');
 
@@ -37,6 +40,7 @@ function Project () {
       .catch((error) => console.log(error))
    }
 
+
  
    function toggleProjectForm () {
         setShowProjectForm(!showProjectForm);
@@ -48,6 +52,7 @@ function Project () {
 }
 
  
+
    function editPost (project) {
         setMessage('')  
         if (project.budget < project.cost) {
@@ -64,13 +69,18 @@ function Project () {
         }).then(resp => resp.json() )
           .then((data) => {
             setProject(data)
+
             setShowProjectForm(!showProjectForm);
+
             setMessage('Projeto atualizado com sucesso!!!')
             setType('success')
           })   
           .catch((error) => console.log(error))
    }
   
+
+   
+
     return (
         <React.Fragment>
             { project.name ? (
@@ -83,7 +93,9 @@ function Project () {
                                 { !showProjectForm ? 'Editar projeto' : 'Fechar'}
                             </button>
                             { !showProjectForm ? (
+
                                 <div className= { styles.project_info }>
+
                                     <p>
                                         <span>Categoria: </span>{ project.category.name}
                                     </p>
@@ -104,6 +116,7 @@ function Project () {
                                 </div>
                             )}
                         </div>
+
                         <div className={ styles.service_form_container }>
                             <h2>Adicione um serviço</h2>
                             <button onClick={ toggleServiceForm } className={ styles.btn }>
@@ -119,6 +132,7 @@ function Project () {
                                 <p>Exibição de serviçõs </p>                                    
                             </Container>
                         </div>
+
                     </Container>
                 </div> ) : (
                 <Loading/>) }
@@ -126,4 +140,6 @@ function Project () {
     )
 }     
 
+
 export default Project;
+
