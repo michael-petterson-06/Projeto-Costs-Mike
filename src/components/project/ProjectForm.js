@@ -9,6 +9,7 @@ function ProjectForm  ({ handleSubmit, btnText, projectData }) {
     const [categories, setCategories ] = useState([]);
     const [project, setProject] =useState(projectData || {})
 
+   
     useEffect(() => {
         fetchCategories();
     },[])

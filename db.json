@@ -12,37 +12,37 @@
       "id": 2
     },
     {
-      "name": "Projeto 4 ",
-      "budget": "2000000",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "name": "Projeto Wine",
+      "budget": "12000",
+      "cost": 0,
+      "services": [],
+      "id": 7
+    },
+    {
+      "name": "Projeto Solução ",
+      "budget": "100000",
       "category": {
         "id": "1",
         "name": "Infra"
       },
       "cost": 0,
       "services": [],
-      "id": 4
-    },
-    {
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "name": "Projeto Wine",
-      "budget": "120000",
-      "cost": 0,
-      "services": [],
-      "id": 7
-    },
-    {
-      "name": "Projeto Solução",
-      "budget": "5740000",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
       "id": 8
+    },
+    {
+      "name": "Fernanda Projetos",
+      "budget": "100000",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 9
     }
   ],
   "categories": [
