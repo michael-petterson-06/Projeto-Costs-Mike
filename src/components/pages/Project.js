@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import Loading from '../layout/Loading'
 import Container from '../layout/Container';
 import styles from './Project.module.css';
-import ProjectForm from '../project/ProjectForm';
-import Message from '../layout/Message';
+import ProjectForm from '../project/ProjectForm'
+import Message from '../layout/Message'
 
 
 function Project () {
