@@ -14,9 +14,9 @@
 
 
 .column {
-    flex-direction: column; /* mudar o eixo de direção*/
-    justify-content: start;
-}
+    flex-direction: column;/* mudar o eixo de direção*/
+    justify-content: flex-start;
+  }
 
 
 .min-height {
