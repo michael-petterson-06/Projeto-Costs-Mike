@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react';
 import Loading from '../layout/Loading'
 import Container from '../layout/Container';
 import styles from './Project.module.css';
-
 import ProjectForm from '../project/ProjectForm';
 import Message from '../layout/Message';
+import ServiceForm from '../service/ServiceForm';
 
 
 
@@ -49,7 +49,12 @@ function Project () {
 
    function toggleServiceForm () {
     setShowServiceForm(!showServiceForm);
-}
+   }
+
+
+   function createService () {
+
+   }
 
  
 
@@ -124,7 +129,11 @@ function Project () {
                             </button>
                             <div className= { styles.project_info }>
                                 { showServiceForm && (
-                                    <div>formulário de serviço</div>
+                                    <ServiceForm
+                                        handleSubmit={ createService }
+                                        btnText='Adicionar Serviço'
+                                        project={project} 
+                                    />
                                 )}
                             </div>
                             <h2>Serviços</h2>
