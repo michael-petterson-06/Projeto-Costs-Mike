@@ -1,7 +1,8 @@
-import { useParams } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { parse , v4 as uuidv4 } from 'uuid';
 import Loading from '../layout/Loading'
-import Container from '../layout/Container';
+import Container from '../layout/Container';    
 import styles from './Project.module.css';
 import ProjectForm from '../project/ProjectForm';
 import Message from '../layout/Message';
@@ -52,7 +53,37 @@ function Project () {
    }
 
 
-   function createService () {
+   function createService (project) {
+        
+    // last service
+        setMessage('')
+        const lastService = project.services[project.services.length - 1]
+        lastService.id = uuidv4()
+        const lastServiceCost = lastService.cost
+        const newCost = parseFloat(project.cost) + parseFloat(lastServiceCost)
+        
+        // maximum value validation
+        if (newCost > parseFloat(project.budget)) {
+          setMessage('Orçamento ultrapassado, verifique o valor do serviço!')
+          setType('error')
+          project.services.pop()
+          return false
+        }
+
+        //add services
+        project.cost = newCost;
+
+        fetch(`http://localhost:5001/projects/${project.id}`,{
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(project),
+        }).then((resp) => resp.json())
+          .then((data) => {
+            console.log(data)
+          })  
+        .catch(error => console.log(error))
 
    }
 
@@ -132,7 +163,7 @@ function Project () {
                                     <ServiceForm
                                         handleSubmit={ createService }
                                         btnText='Adicionar Serviço'
-                                        project={project} 
+                                        projectData={project} 
                                     />
                                 )}
                             </div>
