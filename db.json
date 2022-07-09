@@ -48,8 +48,15 @@
         "id": "1",
         "name": "Infra"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 100,
+      "services": [
+        {
+          "name": "Davi Petterson",
+          "cost": "100",
+          "description": "Todo o Planejamento do Projeto",
+          "id": "6d68add0-426c-40b8-b117-473e3abb08e4"
+        }
+      ],
       "id": 8
     },
     {
