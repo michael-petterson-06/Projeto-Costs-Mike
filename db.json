@@ -18,27 +18,8 @@
       },
       "name": "Projeto Wine",
       "budget": "120",
-      "cost": 20,
-      "services": [
-        {
-          "name": "Fernanda Petterson",
-          "cost": "10",
-          "description": "Lider",
-          "id": "e5b634ff-7de6-4cd5-b7c8-c57e339b74d9"
-        },
-        {
-          "name": "Michael",
-          "cost": "5",
-          "description": "Programador",
-          "id": "5dff02a8-65ab-4537-aaa9-d8e54543bd91"
-        },
-        {
-          "name": "Miguel",
-          "cost": "5",
-          "description": "Programador",
-          "id": "af514213-7d2b-47e1-8945-7cbaa2bfb016"
-        }
-      ],
+      "cost": 0,
+      "services": [],
       "id": 7
     },
     {
