@@ -18,7 +18,7 @@
       },
       "name": "Projeto Wine",
       "budget": "120",
-      "cost": 20,
+      "cost": 55,
       "services": [
         {
           "name": "Fernanda Petterson",
@@ -27,16 +27,22 @@
           "id": "e5b634ff-7de6-4cd5-b7c8-c57e339b74d9"
         },
         {
-          "name": "Michael",
-          "cost": "5",
-          "description": "Programador",
-          "id": "5dff02a8-65ab-4537-aaa9-d8e54543bd91"
-        },
-        {
           "name": "Miguel",
           "cost": "5",
           "description": "Programador",
           "id": "af514213-7d2b-47e1-8945-7cbaa2bfb016"
+        },
+        {
+          "name": "maria",
+          "cost": "20",
+          "description": "faxina",
+          "id": "8a18b96a-0112-4531-b68d-6fe2d05501a3"
+        },
+        {
+          "name": "Jussara",
+          "cost": "20",
+          "description": "Cortar cabelos funcionários",
+          "id": "f0186714-e074-4f48-8d3e-039aec53357e"
         }
       ],
       "id": 7

@@ -1,11 +1,11 @@
 import Styles from './NewProject.module.css'
 import ProjectForm from '../project/ProjectForm';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function NewProject() {
 
 
-    const history = useHistory();
+    const navigate = useNavigate();
 
 
     function createPost (project) {
@@ -21,7 +21,7 @@ function NewProject() {
           })
             .then((resp) => resp.json())
             .then((data) => {
-              history.push('/projects', { message: 'Projeto criado com sucesso!' })
+              navigate('/projects', { message: 'Projeto criado com sucesso!' })
             })
         }
      
