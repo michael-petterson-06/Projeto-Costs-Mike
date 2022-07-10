@@ -7,8 +7,15 @@
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 8,
+      "services": [
+        {
+          "name": "Fernanda Petterson",
+          "cost": "8",
+          "description": "CARROS",
+          "id": "8d5d4a64-fe8e-40f4-a17f-4ab30bda64bd"
+        }
+      ],
       "id": 2
     },
     {
@@ -18,7 +25,7 @@
       },
       "name": "Projeto Wine",
       "budget": "120",
-      "cost": 55,
+      "cost": 37,
       "services": [
         {
           "name": "Fernanda Petterson",
@@ -39,42 +46,91 @@
           "id": "8a18b96a-0112-4531-b68d-6fe2d05501a3"
         },
         {
-          "name": "Jussara",
-          "cost": "20",
-          "description": "Cortar cabelos funcionários",
-          "id": "f0186714-e074-4f48-8d3e-039aec53357e"
+          "name": "Fernanda Petterson",
+          "cost": "2",
+          "description": "CAR",
+          "id": "3aa2e2cc-e028-40f2-a4fb-d50d387fd38d"
         }
       ],
       "id": 7
     },
     {
-      "name": "Projeto Solução ",
-      "budget": "100000",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 100,
-      "services": [
-        {
-          "name": "Davi Petterson",
-          "cost": "100",
-          "description": "Todo o Planejamento do Projeto",
-          "id": "6d68add0-426c-40b8-b117-473e3abb08e4"
-        }
-      ],
-      "id": 8
-    },
-    {
       "name": "Fernanda Projetos",
-      "budget": "100000",
+      "budget": "100",
       "category": {
         "id": "3",
         "name": "Design"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 65,
+      "services": [
+        {
+          "name": "Aux. Administravo",
+          "cost": "60",
+          "description": "Salário anual",
+          "id": "730a7ef4-5f95-4d79-b468-9e6cbeaf2a55"
+        },
+        {
+          "name": "Michael",
+          "cost": "5",
+          "description": "CARROS",
+          "id": "a4fdf9bf-4772-4971-b578-0d47e882c0e9"
+        }
+      ],
       "id": 9
+    },
+    {
+      "name": "Famila Petterson",
+      "budget": "300",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 5,
+      "services": [
+        {
+          "name": "Higiêne",
+          "cost": "5",
+          "description": "Prestação de serviço",
+          "id": "85fded8f-410d-46b6-bbc2-94d891bb391e"
+        }
+      ],
+      "id": 10
+    },
+    {
+      "name": "Jussara",
+      "budget": "30",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 30,
+      "services": [
+        {
+          "name": "Fernanda Petterson",
+          "cost": "30",
+          "description": "CAR",
+          "id": "07e623a3-aa1c-4732-8b2a-91a11aaac6f1"
+        }
+      ],
+      "id": 11
+    },
+    {
+      "name": "Fernanda Petterson",
+      "budget": "100",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 50,
+      "services": [
+        {
+          "name": "Michael",
+          "cost": "50",
+          "description": "macaquinha",
+          "id": "3d38d1b2-e144-45df-a9ac-0a5648f6260a"
+        }
+      ],
+      "id": 12
     }
   ],
   "categories": [
