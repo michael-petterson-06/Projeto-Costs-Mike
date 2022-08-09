@@ -1,84 +1,6 @@
 {
   "projects": [
     {
-      "name": "Projeto 2",
-      "budget": "578000",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 8,
-      "services": [
-        {
-          "name": "Fernanda Petterson",
-          "cost": "8",
-          "description": "CARROS",
-          "id": "8d5d4a64-fe8e-40f4-a17f-4ab30bda64bd"
-        }
-      ],
-      "id": 2
-    },
-    {
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "name": "Projeto Wine",
-      "budget": "120",
-      "cost": 37,
-      "services": [
-        {
-          "name": "Fernanda Petterson",
-          "cost": "10",
-          "description": "Lider",
-          "id": "e5b634ff-7de6-4cd5-b7c8-c57e339b74d9"
-        },
-        {
-          "name": "Miguel",
-          "cost": "5",
-          "description": "Programador",
-          "id": "af514213-7d2b-47e1-8945-7cbaa2bfb016"
-        },
-        {
-          "name": "maria",
-          "cost": "20",
-          "description": "faxina",
-          "id": "8a18b96a-0112-4531-b68d-6fe2d05501a3"
-        },
-        {
-          "name": "Fernanda Petterson",
-          "cost": "2",
-          "description": "CAR",
-          "id": "3aa2e2cc-e028-40f2-a4fb-d50d387fd38d"
-        }
-      ],
-      "id": 7
-    },
-    {
-      "name": "Fernanda Projetos",
-      "budget": "100",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 65,
-      "services": [
-        {
-          "name": "Aux. Administravo",
-          "cost": "60",
-          "description": "Salário anual",
-          "id": "730a7ef4-5f95-4d79-b468-9e6cbeaf2a55"
-        },
-        {
-          "name": "Michael",
-          "cost": "5",
-          "description": "CARROS",
-          "id": "a4fdf9bf-4772-4971-b578-0d47e882c0e9"
-        }
-      ],
-      "id": 9
-    },
-    {
       "name": "Famila Petterson",
       "budget": "300",
       "category": {
@@ -97,40 +19,37 @@
       "id": 10
     },
     {
-      "name": "Jussara",
-      "budget": "30",
+      "name": "Fernanda",
+      "budget": "665",
       "category": {
         "id": "1",
         "name": "Infra"
       },
-      "cost": 30,
-      "services": [
-        {
-          "name": "Fernanda Petterson",
-          "cost": "30",
-          "description": "CAR",
-          "id": "07e623a3-aa1c-4732-8b2a-91a11aaac6f1"
-        }
-      ],
-      "id": 11
+      "cost": 0,
+      "services": [],
+      "id": 15
     },
     {
-      "name": "Fernanda Petterson",
-      "budget": "100",
+      "name": "Michael",
+      "budget": "456",
       "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
+        "id": "3",
+        "name": "Design"
       },
-      "cost": 50,
-      "services": [
-        {
-          "name": "Michael",
-          "cost": "50",
-          "description": "macaquinha",
-          "id": "3d38d1b2-e144-45df-a9ac-0a5648f6260a"
-        }
-      ],
-      "id": 12
+      "cost": 0,
+      "services": [],
+      "id": 16
+    },
+    {
+      "name": "Michael",
+      "budget": "56.5",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 17
     }
   ],
   "categories": [

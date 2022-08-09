@@ -1,6 +1,6 @@
 .navbar {
   display: flex;
-  justify-content: space-between; /* distanciar em espaços iguais.*/
+  justify-content: space-between;
   background-color: #222;
   padding: 1em;
 }
@@ -8,8 +8,8 @@
 
 .list {
   display: flex;
-  list-style: none; /* tira os pontindo na frente da lista*/
-  align-items:center; /* alinha eles na verticarl*/
+  list-style: none; 
+  align-items:center;
 }
 
 

@@ -45,7 +45,7 @@ function Projects() {
           .catch((error) => console.log(error))
     }
 
-
+   
     function removeProject(id) {
         fetch(`http://localhost:5001/projects/${id}`,{
             method: 'DELETE',
